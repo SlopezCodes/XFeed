@@ -1,0 +1,15 @@
+name: Update X Posts
+
+on:
+  schedule:
+    - cron: '0 * * * *'  # This runs the job every hour
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Run update script
+        run: echo "This is where your update script will run."
